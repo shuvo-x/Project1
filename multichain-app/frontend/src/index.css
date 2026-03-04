@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+/* Premium base */
+:root {
+  color-scheme: dark;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: #050612;
+  color: #fff;
+}
+
+/* Nice scrollbar */
+*::-webkit-scrollbar {
+  width: 10px;
+}
+*::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.04);
+}
+*::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.16);
+  border-radius: 999px;
+}
+*::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.22);
+}
+
+/* Helper classes (NO @apply, so no Tailwind apply errors) */
+.glass {
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  background: rgba(255, 255, 255, 0.05);
+  -webkit-backdrop-filter: blur(18px);
+  backdrop-filter: blur(18px);
+}
+
+.soft-card {
+  border-radius: 16px;
+  box-shadow: 0 12px 50px rgba(0, 0, 0, 0.35);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.10);
+  background: rgba(255,255,255,0.05);
+  padding: 8px 12px;
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.85);
+  transition: background 150ms ease, transform 80ms ease, filter 150ms ease;
+}
+.btn:hover {
+  background: rgba(255,255,255,0.10);
+}
+.btn:active {
+  transform: scale(0.99);
+}
+.btn:disabled {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.btn-primary {
+  border: 0;
+  color: #fff;
+  background: linear-gradient(90deg, rgba(99,102,241,1), rgba(14,165,233,1), rgba(16,185,129,1));
+  box-shadow: 0 14px 40px rgba(99,102,241,0.20);
+}
+.btn-primary:hover {
+  filter: brightness(1.08);
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.10);
+  background: rgba(255,255,255,0.05);
+  padding: 4px 12px;
+  font-size: 12px;
+  color: rgba(255,255,255,0.70);
+}
